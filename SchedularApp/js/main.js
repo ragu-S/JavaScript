@@ -8,7 +8,7 @@ var someEntries = {
 
 
 function randItem(itemArray) {
-	return itemArray[Math.floor(Math.random() * itemArray.length)];
+	return Math.floor(Math.random() * itemArray.length);
 }
 
 var count = function(obj) {
@@ -22,10 +22,13 @@ var count = function(obj) {
 $(document).ready(function() {
 	var dayArr = {};
 	var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-	var colors = ["#DAF1A0", "#CB6571", "#6BA198", "#246C60"];
+	var colors1 = ["#DAF1A0", "#CB6571", "#6BA198", "#246C60"];
+	
 	var color2 = ["#A33643","#F87685","#DA5867","#6C1C25","#350A0F","#246C60","#5CC2B1","#3A9081","#12473F","#07231E","#83A135","#D2F675","#B3D656","#556A1C","#28340A"];
 	var color3 = ["#A33643","#F87685","#DA5867","#6C1C25","#350A0F","#246C60","#5CC2B1","#3A9081","#12473F","#07231E","#83A135","#D2F675","#B3D656","#556A1C","#28340A"];
 
+	// removed base color (#A33643) from list
+	color2.shift();
 	color2.sort();
 
 	dayArr = setDays(days, color2);
@@ -59,14 +62,16 @@ function addItem(day, colors) {
 	var slot = $("#"+ day.dayName);
 
 	for(var n = 0, len = day.len(); n < len; n++) {
-		var color = randItem(colors);
+		var colorIndex = randItem(colors);
+		var textColor = Math.floor((1 - (colorIndex/(colors.length)))*colors.length);// : Math.round(1 - (colorIndex/colors.length-1));
+		console.log(textColor);
 		slot.append($('<div>', 
 		{ 
 			class: "itemSlot", 
 			onclick: "doSomething(this)", 
 			text: day.entries[n].description 
 		})
-		.css({ "background-color": color, "color": color}));
+		.css({ "background-color": colors[colorIndex], "color": colors[textColor]}));
 	}
 
 
@@ -102,7 +107,7 @@ function setDays(dayNames, colors) {
 		this.specifics = null;
 		this.timeSlot = 0;
 		this.active = true;
-		this.colorScheme = randItem(colors);
+		this.colorScheme = colors[randItem(colors)];
 		this.timeCompleted = "";
 		return this;
 	}
