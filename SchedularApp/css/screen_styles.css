@@ -1,0 +1,78 @@
+/* Main CSS */
+
+@charset "UTF-8";
+
+body {
+	color: #ADC964;
+	line-height: 1.5em;
+	font-family: Helvetica, Arial;
+	font-size: 14px;
+	background: #000;
+}
+
+.page {
+	width: 1200px;
+	margin: 0 auto 0 auto;
+	position: relative;
+	background: #A33643;
+}
+
+/* Text-containing elements */
+h1 { font-size: 2em; font-weight: normal; color: #0D5146; }
+
+
+.content .scheduler {
+	height: 600px;
+}
+
+.scheduler .weekSlot {
+	/*padding: 3% 20%;*/
+	line-height: 343%;
+	margin: 5px 5%;
+	border: 3px solid;
+}
+
+.daySlot {
+	float: left;
+	/*background-color: blue;*/
+	/*height: 3.5em;*/
+	margin-left: 8px;
+	width: 12%;
+	/*border: 2px solid black;*/
+}
+
+/*	Shift the first dayslot so as to ensure all dayslots appear centered*/
+.daySlot:nth-child(1) {
+	margin-left: 5.73%;
+}
+
+/*	Shift the first dayslot so as to ensure all dayslots appear centered*/
+.daySlot .itemSlot:nth-child(1) {
+	color:#FFF;
+}
+
+.daySlot .itemSlot {
+	color: #DAF1A0;
+	/*color: #F4A2AC;*/
+	background-color: #246C60;
+	margin-bottom: 5px;
+	text-align: center;
+	
+	/*vertical-align: middle;*/
+}
+
+.SlideDiv {
+	-webkit-animation: slideDiv 5s;
+}
+
+.clear {
+	clear: both;
+}
+
+
+@-webkit-keyframes slideDiv {
+	0% { background: #FFF; }
+	25% { background: #DAF1A0; }
+	50% { background: #CB6571; }
+	100% { background: #6BA198; }
+}
