@@ -1,0 +1,58 @@
+/* style.css */
+/* BASIC STYLINGS
+============================================================================= */
+body                            { padding-top:20px; }
+
+/* form styling */
+#form-container                { background:#2f2f2f; margin-bottom:20px;
+    border-radius:5px; }
+#form-container .page-header   { background:#151515; margin:0; padding:30px; 
+    border-top-left-radius:5px; border-top-right-radius:5px; }
+
+/* numbered buttons */
+#status-buttons                 {  }
+#status-buttons a               { color:#FFF; display:inline-block; font-size:12px; margin-right:10px; text-align:center; text-transform:uppercase; }
+#status-buttons a:hover         { text-decoration:none; }
+
+/* we will style the span as the circled number */
+#status-buttons span            { background:#080808; display:block; height:30px; margin:0 auto 10px; padding-top:5px; width:30px; 
+    border-radius:50%; }
+
+/* active buttons turn light green-blue*/
+#status-buttons a.active span   { background:#00BC8C; }
+
+
+
+
+/* Animation Styles */
+#signup-form { position:relative; min-height:300px; overflow:hidden; padding:30px; }
+#form-views { width: auto; }
+
+/* basic styling for leaving and entering */
+#forms-views.ng-enter, #forms-views.ng-leave { 
+	position:absolute;
+	left:30px; 
+	right:30px; 
+	transition: 0.5s all ease;
+}
+
+/* Enter animation */
+#form-views.ng-enter {
+	animation:slideInRight 0.5s both ease;
+}
+
+/* Leave animation */
+#form-views.ng-leave {
+	animation:slideOutLeft 0.5s both ease;
+}
+
+/* slide out to left */
+@keyframes slideOutLeft {
+	to   { transform: translateX(-200%); }
+}
+
+/* Slide in from left*/
+@keyframes slideInRight {
+	from { transform:translateX(200%); }
+	to   { transform:translateX(0) }
+}
