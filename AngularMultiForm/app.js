@@ -20,7 +20,7 @@ angular.module('formApp', ['ngAnimate', 'ui.router'])
     // url will be nested (/form/profile)
     .state('form.profile', {
         url: '/profile',
-        templateUrl: 'profile/form-profile.html'
+        templateUrl: 'form-profile.html'
     })
 
     // url will be /form/interests
