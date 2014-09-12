@@ -1,0 +1,32 @@
+[
+{
+  "uniqueID" : 0,
+  "title" : "Portait in Jazz",
+  "image" : "jazzGeneric.jpg",
+  "description" : "",
+  "author": "his name",//author[0].name
+  "publisher" : "",
+  "year" : 0,
+  "rating" : 5
+},
+{
+  "uniqueID" : 1,
+  "title" : "Kind of Blue",
+  "image" : "bluesGeneric.jpg",
+  "description" : "",
+  "author": "his name",//author[1].name
+  "publisher" : "",
+  "year" : 0,
+  "rating" : 4
+},
+{
+  "uniqueID" : 2,
+  "title" : "Night Train",
+  "image" : "jazzGeneric2.jpg",
+  "description" : "",
+  "author": "his name",//author[3].name
+  "publisher" : "",
+  "year" : 0,
+  "rating" : 5
+}
+]

@@ -1,0 +1,32 @@
+[
+{
+  "uniqueID" : 0,
+  "title" : "Portait in Jazz",
+  "image" : "images/jazzGeneric.jpg",
+  "description" : "",
+  "artist": "Bill Evans",
+  "publisher" : "",
+  "year" : 2014,
+  "rating" : 5
+},
+{
+  "uniqueID" : 1,
+  "title" : "Kind of Blue",
+  "image" : "images/bluesGeneric.jpg",
+  "description" : "",
+  "artist": "Milles Davis",
+  "publisher" : "",
+  "year" : 2011,
+  "rating" : 4
+},
+{
+  "uniqueID" : 2,
+  "title" : "Night Train",
+  "image" : "images/jazzGeneric2.jpg",
+  "description" : "",
+  "artist": "Oscar Peterson",
+  "publisher" : "",
+  "year" : 2010,
+  "rating" : 5
+}
+]

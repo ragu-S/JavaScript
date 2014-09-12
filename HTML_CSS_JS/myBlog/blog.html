@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" type="text/css" href="app/styles/screen_layouts.css" />
+    <link rel="stylesheet" type="text/css" href="app/styles/normalize.css">
+	<!-- <link rel="stylesheet" type="text/css" href="app/styles"> -->
+	<title>Blog Name</title>
+</head>
+<body>
+	<!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <!-- Site content -->
+    <div class="container">
+    	<header>
+    		<label>Welcome to My Page</label>
+    	</header>
+    	<nav>
+    		<ul>
+    			<li><a href="#">Home</li>
+    			<li><a href="#/about">About Me</li>
+    			<li><a href="#/contact">Contact Me</li>
+    		</ul>
+    	</nav>		
+    	<footer>
+    		
+    	</footer>
+    </div>
+    <script type="text/javascript">
+    var early = "i am top most";
+    function outer() {
+        var myName = "im in outer()";
+        function inner() {
+            var innerState = "i exist in inner Only";
+            console.log(last);
+        }
+        
+
+        last = "but do i exist to inner()?";
+        inner();
+    }
+    outer();
+    </script>
+</body>
+</html>

@@ -1,0 +1,139 @@
+/* form starting stylings */
+
+body {
+  top: 0;
+  left: 0;
+  background: url('yosemite-3.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/*.container form {
+  width: 600px;
+  display: block;
+  margin: 20px auto;
+}*/
+.container {
+  margin: 80px auto;
+  width: 500px;
+  border: 3px solid white;
+  border-radius: 20px;
+  background-color: rgba(255,255,255,0.7);
+}
+
+.container form {
+  margin: 50px auto;
+  /*width: 300px;*/
+  width: 300px;
+}
+
+.group {
+  position: relative;
+  margin-bottom: 45px;
+}
+
+input {
+  font-size: 18px;
+  padding: 10px 0px 10px 5px;
+  display: block;
+  width: 300px;
+  border: none;
+  /*background-color: rgba(255,255,255,0.7);*/
+  border-bottom: 1px solid #757575;
+}
+
+input:focus {
+  outline: none;
+}
+
+label {
+  color: #999;
+  font-size: 18px;
+  font-weight: normal;
+  position: absolute;
+  pointer-events: none;
+  left: 5px;
+  top: 10px;
+  -webkit-transition: 0.2s ease all;
+  transition: 0.2s ease all;
+}
+
+/* Active State */
+input:focus ~ label, input:valid ~ label {
+  top: -20px;
+  font-size: 14px;
+  color: #5264AE;
+}
+
+/* Bottom Bars */
+.bar {
+  position:relative;
+  display:block;
+  width:305px;
+}
+
+.bar:before, .bar:after {
+  content: '';
+  height: 2px;
+  width: 0;
+  bottom: 1px;
+  position: absolute;
+  background: #5264AE;
+  -webkit-transition: 0.2s ease all;
+  transition: 0.2s ease all;
+}
+
+.bar:before {
+  left: 50%;
+}
+
+.bar:after {
+  right: 50%;
+}
+
+/* Active State */
+input:focus ~ .bar:before, input:focus ~ .bar:after {
+  width: 50%;
+}
+
+/* HIGHLIGHTER */
+/*.highlight {
+  position: absolute;
+  height: 60%;
+  width: 100%;
+  top: 25%;
+  left: 0;
+  pointer-events: none;
+  opacity: 0.5s;
+}*/
+
+/* Active State */
+input:focus ~ .highlight {
+  animation:inputHighlighter 0.3s ease;
+}
+
+#submit {
+  /*display: block;
+  margin: 10px auto;*/
+  width: 300px;
+}
+
+@keyframes inputHighLighter {
+  from { background: #5264AE; }
+  to { width:0; background: transparent;}
+}
+
+@-webkit-keyframes inputHighLighter {
+  from { background: #5264AE; }
+  to { width:0; background: transparent;}
+}
+
+
+
+
+
+
+
+
+
+

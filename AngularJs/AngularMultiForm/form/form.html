@@ -1,0 +1,63 @@
+<!-- form.html -->
+<div class="row">
+<div class="col-sm-8 col-sm-offset-2">
+	
+	<div id="form-container">
+	 	<div class="page-header text-center">
+	 		<h2> Let's Be Friends </h2>
+
+	 		<!-- the links to our nested states using relative paths -->
+	 		<div id="status-buttons" class="text-center">
+	 			<a ui-sref-active="active" ui-sref=".profile"><span>1</span> Profile</a>
+	 			<a ui-sref-active="active" ui-sref=".interests"><span>2</span> Interests</a>
+	 			<a ui-sref-active="active" ui-sref=".payment"><span>3</span> Payment</a>
+	 		</div>
+	 	</div>
+
+		<form id="signup-form" ng-submit="processForm()">
+			
+			<!-- where our nested views will be injected-->
+			<div id="form-views" ui-view></div>
+		</form>
+
+	</div>
+
+	<pre>
+		{{ formData }}
+	</pre>
+
+</div>
+</div>	
+
+<!--
+It ui-routing changes ur application pages based on states (ie. which url had clicked on), but this is different from URU
+
+
+How do u include ui-router into angular app:
+
+
+// html section
+<html ng-app="myApp">
+<head>
+	<script type="text/javascript" src="js/angular.js"></script>
+	<script type="text/javascript" src=""></script>
+	<script type="text/javascript" src="app.js"></script>
+</head>
+
+// app.js
+
+var myApp = 
+
+<html ng-app="myApp">
+<head>
+	<script type="text/javascript" src="js/angular.js"></script>
+	<script type="text/javascript" src="js/angular-ui-router.js"></script>
+	<script type="text/javascript" src="myApp.js"></script>
+</head>
+
+
+// app.js file
+
+var myApp = angular.module('myApp', ['ui.router']);
+-->
+

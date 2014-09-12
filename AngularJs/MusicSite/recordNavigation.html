@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en" ng-app="musicApp">
+<head>
+  <meta charset="UTF-8">
+  <title>Angular Demo</title>
+  <script src="lib/angular/angular.min.js"></script>
+  <script type="text/javascript" src="app.js"></script>
+  <link rel="stylesheet" type="text/css" href="styles/normalize.css">
+  <link href="http://fonts.googleapis.com/css?family=Great+Vibes" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" type="text/css" href="styles/layout.css">
+</head>
+<body>
+  <div class="page">
+  <h1>Welcome to the House of Fine Music</h1>
+
+  <div class="content">
+    <header >
+      <nav>
+         <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">About Us</a></li>
+        </ul>
+      </nav>
+      <div class="searchSection">
+        <label>Search:</label>
+        <input type="text" class="search" ng-model="search" autofocus>
+        <button>Find</button>
+      </div>
+      <div class="clear"></div>
+    </header>
+    <!-- <nav>
+    </nav> -->
+    <div class="container">
+      <div class="recordHeader">
+        <div class="filter">
+          <label>Category:</label>
+          <select>
+            <option>Jazz</option>
+            <option>Blues</option>
+            <option>Classical</option>
+          </select>
+          <label>Sort By:</label>
+          <select>
+            <option>Title</option>
+            <option>Artist</option>
+            <option>Genre</option>
+            <option>Year</option>
+          </select>
+        </div>
+      </div>
+      <div class="recordDisplayArea" ng-controller="recordDisplay">
+
+        <div class="recordContainer" ng-repeat="record in records | filter: search">
+          <div class="recordThumbNail" >
+            <label>{{ record.title }}</label>
+            <img ng-src="{{record.image}}">
+          </div>
+        </div>
+        <div class="clear"></div>
+
+      </div>
+      <div class="recordFooter"></div>
+    </div>
+    <aside class="twitterFeed">
+    </aside>
+    <div class="clear"></div>
+
+    <footer>
+    </footer>
+  </div>
+  </div>
+</body>
+</html>

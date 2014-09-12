@@ -1,0 +1,71 @@
+/* Main CSS */
+
+html, body, div, form, input {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 25px;
+  font-family: Helvetica, Arial;
+  top: 0;
+  left: 0;
+  background: url('yosemite-3.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  /*background: transparent url('yosemite-3.jpg') no-repeat 0 0;*/
+}
+
+body .container {
+  margin: 80px auto;
+  width: 600px;
+  border: 2px solid white;
+  border-radius: 20px;
+  background-color: rgba(255,255,255,0.7);
+}
+
+.container form {
+  margin: 50px auto;
+  width: 285px;
+}
+
+form .group, form h1 {
+  position: relative;
+  margin-bottom: 45px;
+}
+
+form h1, .group label {
+  border-radius: 10px;
+  border-style: solid white;
+  line-height: 50px;
+}
+
+.group label {
+  position: absolute;
+  pointer-events: none;
+  top: -5px;
+  left: 6px;
+  -webkit-transition: 0.2s ease all;
+  transition: 0.2s ease all;
+}
+
+input:focus {
+  outline: none;
+}
+
+input:focus ~ label, input:valid ~ label {
+  top: -40px;
+  font-size: 0.8em;
+  /*color: #5264AE;*/
+  color: #FFF;
+}
+
+.group input {
+  background-color: #BABABA;
+}
+
+#submit {
+  display: block;
+  margin: 10px auto;
+  width: 170px;
+}
